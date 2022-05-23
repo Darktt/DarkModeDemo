@@ -17,6 +17,14 @@ class ViewController: UIViewController, UserInterfaceSupportable
     
     @IBOutlet fileprivate weak var darkView: UIView!
     
+    override var overrideUserInterfaceStyle: UIUserInterfaceStyle {
+        
+        didSet {
+            
+            self.setNeedsStatusBarAppearanceUpdate()
+        }
+    }
+    
     // MARK: - Instance Methods -
     
     override func viewDidLoad()
@@ -71,7 +79,5 @@ private extension ViewController
         }()
         
         self.overrideUserInterfaceStyle = style
-        
-        self.setNeedsStatusBarAppearanceUpdate()
     }
 }
