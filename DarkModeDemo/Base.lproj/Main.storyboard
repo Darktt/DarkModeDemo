@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -13,18 +14,18 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DarkModeDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1TH-CY-chD">
-                                <rect key="frame" x="50" y="94" width="314" height="32"/>
+                                <rect key="frame" x="50" y="50" width="314" height="32"/>
                                 <segments>
                                     <segment title="First"/>
                                     <segment title="Second"/>
                                 </segments>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MaU-i3-Kym">
-                                <rect key="frame" x="82" y="323" width="250" height="250"/>
+                                <rect key="frame" x="82" y="243" width="250" height="250"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v7N-cR-Aao">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="125"/>
@@ -54,11 +55,31 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="1TH-CY-chD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="0RO-fV-2hC"/>
+                            <constraint firstItem="MaU-i3-Kym" firstAttribute="top" secondItem="1TH-CY-chD" secondAttribute="bottom" constant="10" id="F2P-GX-FcY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1TH-CY-chD" secondAttribute="trailing" constant="50" id="b2i-AH-Z5o"/>
                             <constraint firstItem="MaU-i3-Kym" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nGo-9v-DzK"/>
-                            <constraint firstItem="1TH-CY-chD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="pbx-by-fyc"/>
+                            <constraint firstItem="1TH-CY-chD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="pbx-by-fyc">
+                                <variation key="heightClass=compact-widthClass=compact" constant="15"/>
+                            </constraint>
                             <constraint firstItem="MaU-i3-Kym" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="roJ-tZ-Nob"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="F2P-GX-FcY"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="F2P-GX-FcY"/>
+                                <exclude reference="nGo-9v-DzK"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="F2P-GX-FcY"/>
+                                <exclude reference="nGo-9v-DzK"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="darkView" destination="iYv-qr-wKT" id="qz3-cJ-95a"/>

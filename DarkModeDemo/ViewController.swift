@@ -36,7 +36,7 @@ class ViewController: UIViewController, UserInterfaceSupportable
             
             $0.removeAllSegments()
             $0.insertSegment(withTitle: "System", at: 0, animated: false)
-            $0.insertSegment(withTitle: "light", at: 1, animated: false)
+            $0.insertSegment(withTitle: "Light", at: 1, animated: false)
             $0.insertSegment(withTitle: "Dark", at: 2, animated: false)
             $0.addTarget(self, action: #selector(self.segmentedUpdateAction(_:)), for: .valueChanged)
         }.fluent
