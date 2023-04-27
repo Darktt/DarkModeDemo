@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class ViewController: UIViewController, UserInterfaceSupportable
 {
@@ -25,6 +26,8 @@ class ViewController: UIViewController, UserInterfaceSupportable
         }
     }
     
+    var subscribers: [AnyCancellable] = []
+    
     // MARK: - Instance Methods -
     
     override func viewDidLoad()
@@ -38,10 +41,14 @@ class ViewController: UIViewController, UserInterfaceSupportable
             $0.insertSegment(withTitle: "System", at: 0, animated: false)
             $0.insertSegment(withTitle: "Light", at: 1, animated: false)
             $0.insertSegment(withTitle: "Dark", at: 2, animated: false)
-            $0.addTarget(self, action: #selector(self.segmentedUpdateAction(_:)), for: .valueChanged)
+//            $0.addTarget(self, action: #selector(self.segmentedUpdateAction(_:)), for: .valueChanged)
         }.fluent
             .selectedSegmentIndex(0)
-            .discardResult
+            .subject
+            .propertyPublisher(.valueChanged, keyPath: \.selectedSegmentIndex)
+            .compactMap(UIUserInterfaceStyle.init(rawValue:))
+            .assign(to: \.overrideUserInterfaceStyle, on: self)
+            .store(in: &self.subscribers)
         
         self.lightView.fluent
             .backgroundColor(.sharkLightColor)

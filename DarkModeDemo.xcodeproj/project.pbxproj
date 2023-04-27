@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F26ADCF929FA400600D5A397 /* UIControlPublishers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26ADCF629FA400500D5A397 /* UIControlPublishers.swift */; };
+		F26ADCFA29FA400600D5A397 /* PropertyPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26ADCF729FA400600D5A397 /* PropertyPublisher.swift */; };
+		F26ADCFB29FA400600D5A397 /* EventPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26ADCF829FA400600D5A397 /* EventPublisher.swift */; };
 		F2B04BFC283B130400297003 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B04BFB283B130400297003 /* AppDelegate.swift */; };
 		F2B04BFE283B130400297003 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B04BFD283B130400297003 /* SceneDelegate.swift */; };
 		F2B04C00283B130400297003 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B04BFF283B130400297003 /* ViewController.swift */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F26ADCF629FA400500D5A397 /* UIControlPublishers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlPublishers.swift; sourceTree = "<group>"; };
+		F26ADCF729FA400600D5A397 /* PropertyPublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyPublisher.swift; sourceTree = "<group>"; };
+		F26ADCF829FA400600D5A397 /* EventPublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPublisher.swift; sourceTree = "<group>"; };
 		F2B04BF8283B130400297003 /* DarkModeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DarkModeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B04BFB283B130400297003 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2B04BFD283B130400297003 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +70,9 @@
 		F2B04BFA283B130400297003 /* DarkModeDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F26ADCF829FA400600D5A397 /* EventPublisher.swift */,
+				F26ADCF729FA400600D5A397 /* PropertyPublisher.swift */,
+				F26ADCF629FA400500D5A397 /* UIControlPublishers.swift */,
 				F2B04C12283B166000297003 /* Extensions */,
 				F2B04C0F283B13AD00297003 /* Model */,
 				F2B04C17283B2CB900297003 /* UserInterfaceSupportable.swift */,
@@ -167,12 +176,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2B04C18283B2CB900297003 /* UserInterfaceSupportable.swift in Sources */,
+				F26ADCFB29FA400600D5A397 /* EventPublisher.swift in Sources */,
 				F2B04C00283B130400297003 /* ViewController.swift in Sources */,
 				F2B04BFC283B130400297003 /* AppDelegate.swift in Sources */,
 				F2B04BFE283B130400297003 /* SceneDelegate.swift in Sources */,
+				F26ADCF929FA400600D5A397 /* UIControlPublishers.swift in Sources */,
 				F2B04C11283B13D300297003 /* FluentInterface.swift in Sources */,
 				F2B04C14283B16A900297003 /* Appliable.swift in Sources */,
 				F2B04C16283B217500297003 /* UIColorExtension.swift in Sources */,
+				F26ADCFA29FA400600D5A397 /* PropertyPublisher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
